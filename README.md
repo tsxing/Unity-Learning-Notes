@@ -1,5 +1,5 @@
 # Unity-Learning-Notes
-Unity notes. Not a tutorial/guide. Simply a collection of useful code and observations to help explore game development. 
+Not a tutorial/guide; simply a collection of useful code and observations to help explore game development. 
 <details> 
 	<summary><h2> 2D Movements (Simple) </h2> </summary>
 	Select new project (2D Core). 
