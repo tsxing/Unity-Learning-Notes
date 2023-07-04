@@ -44,7 +44,7 @@ This gives the simple left/right movement with arrow keys.
 
 <details>
 <summary><h3>Jump with Space (with Physics)</h3></summary>
- Below script will make player jump up, but will keep jumping up whenever up key is pressed. 
+ Below script will make player jump up, but will keep jumping up whenever up key is pressed (flappy bird style).
 
  ```cs
 using System.Collections;
