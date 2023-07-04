@@ -41,4 +41,40 @@ public class playerMovement : MonoBehaviour
 `public` fields appear in Unity's inspector. For example, in above code, `Speed` is able to be changed (higher number the faster). `private` fields (ex: Move), doesn't appear in the inspector. <br> <br> 
 This gives the simple left/right movement with arrow keys.
 </details>
+
+<details>
+<summary><h3>Jump with Space (with Physics)</h3></summary>
+ Below script will make player jump up, but will keep jumping up whenever up key is pressed. 
+
+ ```cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class playerMovement : MonoBehaviour
+{
+
+	[SerializeField] float jumpForce = 10;
+	Rigidbody2D rb; 
+	void Start()
+	{
+		rb = GetComponent<Rigidbody2D>();
+	}
+
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Space))
+        {
+			rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+
+	}
+}
+
+```
+`[SerializeField]` allows private fields to appear in inspector. <br>
+`jumpForce` can be changed to modify jump heights. <br>
+`KeyCode.Space` = when space key pressed. `KeyCode.UpArrow` would work when up arrow pressed. <br>
+Make sure the script is added to the player (add component). 
+</details>
 </details>
