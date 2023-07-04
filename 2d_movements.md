@@ -1,8 +1,12 @@
 ## 2D Movements (Simple)
 Select new project (2D Core). 
-### Left and Right
+### Left and Right with RigidBody2D
 
-After creating a Sprite (player) and Platform, add components "Rigidbody 2D" for the sprite, and "BoxCollision 2D" for both sprite and platform (Remember to tag the sprite as "player"). 
+1. After creating a player and platform, add components "Rigidbody 2D" for the sprite, and "BoxCollision 2D" for both player and platform (Remember to tag the sprite as "player"). <br>
+1. Add new script/component for Player. I named it `playerMovement` in below code. <br>
+- Player components: Rigidbody2D, BoxCollision2D, playerMovement (C# script)  <br> 
+- Platform/Ground components: BoxCollision2D
+The default compiler (ex: VSC) should open for code editing purposes. <br>
 
 The following code, using Rigidbody2D, gives left/right movements via arrow keys:
 ```cs
@@ -12,8 +16,6 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-	private CharacterController player;
-
 	public float Speed;
 	private float Move;
 
@@ -31,7 +33,8 @@ public class playerMovement : MonoBehaviour
 	}
 }
 ```
-Player components: Rigidbody2D, BoxCollision2D, playerMovement (C# script) 
-Platform/Ground components: BoxCollision2D
+`MonoBehavior` provides a "template script". This allows script to be attached to a game object in the editor. <br>
+`public` fields appear in Unity's inspector. For example, in above code, `Speed` is able to be changed (higher number the faster). `private` fields (ex: Move), doesn't appear in the inspector. <br> <br> 
+
 
 This gives the simple left/right movement with arrow keys. 
