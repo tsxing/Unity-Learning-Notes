@@ -37,3 +37,4 @@ public class playerMovement : MonoBehaviour
 ```
 `MonoBehavior` provides a "template script". This allows script to be attached to a game object in the editor. <br>
 `public` fields appear in Unity's inspector. For example, in above code, `Speed` is able to be changed (higher number the faster). `private` fields (ex: Move), doesn't appear in the inspector. <br> <br> 
+This gives the simple left/right movement with arrow keys.
